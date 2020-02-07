@@ -61,9 +61,6 @@ public class HomeController {
         newJob.setEmployer(employerRepository.findById(employerId).get());
 
         List<Skill> skillsList = new ArrayList<>();
-//        for (int skillId : skills) {
-//            skillsList.add(skillRepository.findById(skillId).get());
-//        }
         for (Skill skill : skillRepository.findAllById(skills)){
             skillsList.add(skill);
         }
